@@ -1,20 +1,20 @@
 import React from 'react';
 import Banner from '../Component/Banner/Banner';
-import Footer from '../Component/Share/Footer/Footer';
 import PopularPost from '../Component/PopularPost';
 import NewPosts from '../Component/NewPosts';
 import TrendyPost from '../Component/TrendyPost';
 import TopPost from '../Component/TopPost';
+import LatestVideo from '../Component/LatestVideo';
 
 const Home = () => {
     return (
-        <div>
+        <div className='allContainer'>
             <Banner />
             <PopularPost />
             <NewPosts />
+            <LatestVideo />
             <TrendyPost />
             <TopPost />
-            <Footer />
         </div>
     );
 };

@@ -26,11 +26,11 @@ const NewPosts = () => {
                                 <img
                                     src={post?.image}
                                     alt="Blog Cover"
-                                    className="object-fill lg:w-60 xl:w-80 rounded-lg rounded-b-none h-full xl:h-56"
+                                    className="object-fill lg:w-60 xl:w-80 rounded-lg h-full xl:h-48"
                                 />
                             </div>
                             <div className='p-3 md:p-0'>
-                                <h2 className="px-1 text-xl font-semibold tracking-normal text-[#3E3232] font-sans mt-3 pr-4">
+                                <h2 className="px-1 text-xl font-semibold tracking-normal text-[#3E3232] font-sans  pr-4">
                                     {post?.title.length > 18 ? `${post?.title.slice(0, 18)}...` : post?.title}
                                 </h2>
                                 <p className="flex flex-row flex-wrap w-full px-1 pr-4 py-3 overflow-hidden text-md text-justify text-[#908989]">
@@ -46,7 +46,7 @@ const NewPosts = () => {
                                             />
                                             <div className="flex flex-col mx-2">
                                                 <div title={post?.writer}>
-                                                    <Link to='/' className="font-semibold text-[#3E3232] text-lg hover:underline">
+                                                    <Link to='/' className="font-semibold text-[#3E3232] text-lg ml-1 hover:underline">
                                                         {post?.writer.length > 5 ? `${post?.writer.slice(0, 5)}...` : post?.writer}
                                                     </Link>
                                                 </div>

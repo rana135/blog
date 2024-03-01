@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.allContainer{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 img {
   width: 100%;
   display: block;

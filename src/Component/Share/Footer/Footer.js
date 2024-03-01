@@ -7,10 +7,10 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className="bg-sky-50 mt-24 footers">
+        <div className="bg-[#F5F5F5] mt-24 footers">
             <div className="flex lg:flex-row lg:justify-between flex-col items-center justify-center py-20 px-10 gap-10">
                 <div className="w-full p-0 mb-2 text-3xl text-blue-900 font-bold ">
-                    <h1 className='join'>Join Our <span className="text-purple-600 underline">Newsletter</span> & Get updated</h1>
+                    <h1 className='join'>Join Our <span className="text-[#FC4308] underline">Newsletter</span> & Get updated</h1>
                 </div>
                 <div className='w-full gap-10'>
                     <div className="flex flex-row justify-center">
@@ -20,7 +20,7 @@ const Footer = () => {
                             placeholder="Enter your email"
                         />
                         <button
-                            className="p-2 lg:w-28 h-16 bg-purple-600 font-bold rounded-r-lg  text-white hover: hover:bg-blue-900"
+                            className="p-2 lg:w-28 h-16 bg-[#FC4308] font-bold rounded-r-lg  text-white hover: hover:bg-blue-900"
                             type="button"
                         >
                             Subscribe
@@ -36,10 +36,12 @@ const Footer = () => {
                         src={require("../../Assets/icon/logo_01.png")}
                         alt=""
                     /> */}
-                    <h1 className="font-bold text-3xl text-blue-900">☣ Nayzak</h1>
+                    <h3 className="text-[#FC4308] font-semibold text-2xl w-48">
+                        Bharat 24/7
+                    </h3>
                     {/* <img src={logo} alt="" /> */}
                     <div className="lg:w-72">
-                        <p>Experience Personalized Online Shopping in united states  with Nayzak.com.bd</p>
+                        <p>Share your story with the world. Stand out with a professionally-designed blog website that can be customized to fit your brand</p>
                     </div>
                     <div className="footerSocial mt-8">
                         <a href="/" target="blank"><i className="fa fa-github"></i></a>
@@ -57,11 +59,11 @@ const Footer = () => {
                     <Link to="">Blog</Link>
                 </div>
                 <div className="footer-link">
-                    <span className="font-bold uppercase text-blue-900 text-2xl">Products</span>
-                    <Link to="">Female collection</Link>
-                    <Link to="">Male collection</Link>
-                    <Link to="">Brand product</Link>
-                    <Link to="">Latest Brand</Link>
+                    <span className="font-bold uppercase text-blue-900 text-2xl">Blogs</span>
+                    <Link to="">Blog collection</Link>
+                    <Link to="">Blog Feature</Link>
+                    <Link to="">Top Blog</Link>
+                    <Link to="">Latest Blog</Link>
                     <Link to="">Top collection</Link>
                 </div>
                 <div className="footer-link">
@@ -78,7 +80,7 @@ const Footer = () => {
             <div className="lg:flex items-center justify-between lg:px-9 py-6 text-slate-700">
                 <div className="flex items-center justify-center">
                     <p className='all-rights'>
-                        Thank you for ❤️'ing us. <br /> © 2023 Nayzak | All
+                        Thank you for ❤️'ing us. <br /> © 2023 Bharat | All
                         rights reserved.
                     </p>
                 </div>

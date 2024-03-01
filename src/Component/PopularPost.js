@@ -56,14 +56,14 @@ const PopularPost = () => {
                                     <img
                                         src={post?.image}
                                         alt="Blog Cover"
-                                        className="object-fill w-full rounded-lg rounded-b-none h-56"
+                                        className="object-fill w-full rounded-lg  h-48"
                                     />
                                 </div>
                                 <h2 className="px-4 text-xl font-semibold tracking-normal text-[#3E3232] font-sans mt-3">
                                     {post?.title.length > 18 ? `${post?.title.slice(0, 18)}...` : post?.title}
                                 </h2>
                                 <p className="flex flex-row flex-wrap w-full px-4 py-3 overflow-hidden text-md text-justify text-[#908989]">
-                                    {post?.content.length > 60 ? `${post?.content.slice(0, 60)}...` : post?.content}
+                                    {post?.content.length > 75 ? `${post?.content.slice(0, 75)}...` : post?.content}
                                 </p>
                                 <div className="mx-3 rounded-xl px-3 py-2 mt-2 bg-[#F5F5F5]">
                                     <div className="flex items-center justify-between">
@@ -75,7 +75,7 @@ const PopularPost = () => {
                                             />
                                             <div className="flex flex-col mx-2">
                                                 <div>
-                                                    <Link to='/' className="font-semibold text-[#3E3232] text-lg hover:underline">
+                                                    <Link to='/' className="font-semibold text-[#3E3232] text-lg ml-1 hover:underline">
                                                         {post?.writer}
                                                     </Link>
                                                 </div>

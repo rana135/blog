@@ -9,7 +9,7 @@ import person4 from '../asset/home/TrendyPost/person/person4.png';
 
 const topPostData = [
     {
-        _id: "popularPost-1",
+        _id: "topPost-1",
         title: "Opening Day of Boating Season, Seattle WA",
         content: "Of course the Puget Sound is very watery, and where there is water, there are boats. Today is the Grand Opening of Boating Season when traffic gets stalled in the University District (UW) while the Montlake Bridge",
         image: banner1,
@@ -18,16 +18,16 @@ const topPostData = [
         date: "August 18 , 2022",
     },
     {
-        _id: "popularPost-2",
+        _id: "topPost-2",
         title: "How to choose the right laptop for programming",
         content: "Choosing the right laptop for programming can be a tough process. It’s easy to get confused while researching the various options. There are many different laptop models out there, each with a different set of trade-offs",
         image: banner2,
-        writer: "Louis Hoebregts",
+        writer: "Robert",
         writerImage: person2,
         date: "July 25 , 2022",
     },
     {
-        _id: "popularPost-3",
+        _id: "topPost-3",
         title: "How we built the first real self-driving car",
         content: "Electric self-driving cars will save millions of lives and significantly accelerate the world’s transition to sustainable energy, but only when",
         image: banner3,
@@ -36,7 +36,7 @@ const topPostData = [
         date: "July 14 , 2022",
     },
     {
-        _id: "popularPost-4",
+        _id: "topPost-4",
         title: "How to Persuade Your Parents to Buy Fast Food",
         content: "Parents often don’t want to buy fast food. They may be worried that it’s too expensive, unhealthy, or not worth the effort and time.",
         image: banner4,

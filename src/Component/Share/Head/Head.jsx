@@ -7,117 +7,83 @@ import { RiUser3Line } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../../../assets/Buyer/home/Branding.svg";
 import "./Head.css";
+import LogoSearch from "../../LogoSearch/LogoSearch";
+import { useWindowSize } from "react-use";
+import { ImSearch } from "react-icons/im";
 
 const Head = () => {
   const navigate = useNavigate();
+  const { width } = useWindowSize();
 
   return (
     <div>
-      <div className="navbar fixed top-0 z-[1000] bg-[#C9D7E0] h-[95px]">
-        <div className="navbar-start">
-          <Link to="/">
-            {/* <img className="flex-wrap" src={logo} alt="logo" /> */}
-            <h3 className="text-red-700 font-semibold text-2xl">Bharat 24/7</h3>
-          </Link>
-        </div>
+      <div className="navbar fixed top-0 z-[1000] bg-[#FFFFFF] w-full h-[95px]">
+        <Link to="/">
+          {/* <img className="flex-wrap" src={logo} alt="logo" /> */}
+          <h3 className="text-[#FC4308] font-semibold text-2xl w-48">
+            Bharat 24/7
+          </h3>
+        </Link>
         {/* desktop */}
-        <div className="navbar-center hidden md:flex">
+        <div className="navbar-start w-full hidden md:flex">
           <ul className="menu menu-horizontal">
             <li tabIndex={0}>
-              <Link className="text-lg" to="/">
-                Store
+              <Link className="text-lg font-bold" to="/">
+                Categories
               </Link>
             </li>
             <li tabIndex={0}>
-              <details>
-                <summary className="text-lg">Product</summary>
-                <ul className="p-0">
-                  <li>
-                    <Link className="text-md font-bold" to="/">
-                      Submenu
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-md font-bold" to="/">
-                      Submenu
-                    </Link>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary className="text-lg">Pages</summary>
-                <ul className="p-0">
-                  <li>
-                    <Link className="text-md font-bold" to="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-md font-bold" to="/payment">
-                      payment
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-md font-bold" to="/faq">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-md font-bold" to="/blogs">
-                      Blogs
-                    </Link>
-                  </li>
-                </ul>
-              </details>
+              <Link className="text-lg font-bold" to="/">
+                Pages
+              </Link>
             </li>
             <li tabIndex={1}>
-              <Link className="text-lg" to="/general-settings">
-                Dashboard
+              <Link className="text-lg font-bold" to="/">
+                Contact Us
+              </Link>
+            </li>
+            <li tabIndex={1}>
+              <Link className="text-lg font-bold" to="/">
+                About Us
               </Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-[16px]">
           <div className="flex justify-center items-center md:gap-4">
-            {/* <button>
-              <div className="indicator">
-                <IoMdNotificationsOutline className="navBtn" />
-                <span className="badge badge-xs badge-primary indicator-item">
-                  5
-                </span>
-              </div>
-            </button> */}
-
-            <Link className="text-lg" to="/general-settings">
-              <RiUser3Line className="navBtn" />
-            </Link>
-            <Link to="/shoppingCart">
-              <div className="nav-shopping-cart">
-                <button>
-                  <MdOutlineShoppingBag className="navBtn hidden md:block" />
-                </button>
-                <button className="cart-circle hidden md:block">3</button>
-              </div>
-            </Link>
-            <Link to="/wishlist">
-              <div className="nav-shopping-cart">
-                <button>
-                  <FaRegHeart className="navBtn hidden md:block" />
-                </button>
-                <button className="cart-circle hidden md:block">3</button>
-              </div>
-            </Link>
+            {width > 1023 && <LogoSearch />}
           </div>
 
-          <div className="hidden md:block">
-            <button
-              onClick={() => navigate("/login")}
-              class="flex min-w-[90px] items-center justify-center flex-none px-2 py-[8px] rounded-lg font-medium bg-[#121212] text-white text-[14px]"
+          <div className="dropdown dropdown-start">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
             >
-              Sign in
-            </button>
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
           </div>
           {/* Mobile */}
           <details className="dropdown dropdown-end md:hidden">
@@ -149,17 +115,9 @@ const Head = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FAFAFB] rounded-md w-[90vw] text-[#121212]"
             >
               <div className="flex flex-col">
-                <div className="navbar-start p-2 flex">
-                  <Link to="/">
-                    {/* <img className="image-full" src={logo} alt="logo" /> */}
-                    <h3 className="text-red-700 font-semibold text-2xl">
-                      Bharat 24/7
-                    </h3>
-                  </Link>
-                </div>
-                {/* <div class="relative w-full px-2 py-[16px]">
+                <div class="relative w-full px-2 py-[16px]">
                   <div class="flex absolute inset-y-0 left-0 items-center px-[16px] pointer-events-none">
-                    <IoIosSearch className="w-[24px] h-[24px]" />
+                    <ImSearch className="w-[20px] h-[20px]" />
                   </div>
                   <input
                     type="text"
@@ -168,26 +126,14 @@ const Head = () => {
                     placeholder="Search"
                     required=""
                   />
-                </div> */}
+                </div>
+
                 <li tabIndex={0}>
                   <details>
-                    <summary className="line rounded-none">Shop</summary>
+                    <summary className="line rounded-none">Categories</summary>
                     <ul className="p-2">
                       <li>
-                        <Link to="/">Store</Link>
-                      </li>
-                    </ul>
-                  </details>
-                </li>
-                <li tabIndex={0}>
-                  <details>
-                    <summary className="line rounded-none">Product</summary>
-                    <ul className="p-2">
-                      <li>
-                        <Link to="/">Submenu</Link>
-                      </li>
-                      <li>
-                        <Link to="/">Submenu</Link>
+                        <Link to="/">Categories</Link>
                       </li>
                     </ul>
                   </details>
@@ -197,50 +143,41 @@ const Head = () => {
                     <summary className="line rounded-none">Pages</summary>
                     <ul className="p-2">
                       <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/">Top Product</Link>
                       </li>
                       <li>
-                        <Link to="/payment">payment</Link>
-                      </li>
-                      <li>
-                        <Link to="/faq">FAQ</Link>
-                      </li>
-                      <li>
-                        <Link to="/blogs">Blogs</Link>
+                        <Link to="/">payment</Link>
                       </li>
                     </ul>
                   </details>
                 </li>
                 <li tabIndex={1}>
                   <details>
-                    <summary className="line rounded-none">Dashboard</summary>
+                    <summary className="line rounded-none">Contact Us</summary>
                     <ul className="p-2">
                       <li tabIndex={1}>
-                        <Link to="/general-settings">Seller Dashboard</Link>
+                        <Link to="/">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+                <li tabIndex={1}>
+                  <details>
+                    <summary className="line rounded-none">About Us</summary>
+                    <ul className="p-2">
+                      <li tabIndex={1}>
+                        <Link to="/">About Us</Link>
                       </li>
                     </ul>
                   </details>
                 </li>
               </div>
 
-              <div className="flex flex-col mt-[100px]">
-                <Link to="/shoppingCart">
-                  <div className="px-2 flex items-center justify-between">
-                    <h1 className="text-[#807E7E] font-[500] text-[14px]">
-                      Cart
-                    </h1>
-                    <div className="nav-shopping-cart">
-                      <button>
-                        <MdOutlineShoppingBag className="navBtn" />
-                      </button>
-                      <button className="cart-circle">3</button>
-                    </div>
-                  </div>
-                </Link>
+              <div className="flex flex-col mt-[14px]">
                 <Link to="/wishlist">
-                  <div className="px-2 flex items-center justify-between mt-[16px]">
-                    <h1 className="text-[#807E7E] font-[500] text-[14px]">
-                      Wishlist
+                  <div className="px-2 flex items-center justify-between">
+                    <h1 className="text-[#807E7E] font-[500] text-[20px]">
+                      Favourite
                     </h1>
                     <div className="nav-shopping-cart">
                       <button>

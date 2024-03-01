@@ -13,11 +13,11 @@ const Banner = () => {
         slidesToScroll: 1,
     };
     return (
-        <div>
-            <div>
-                {/* <BannerFilter /> */}
+        <div className='mt-32'>
+            <div className='overflow-hidden'>
+                <BannerFilter />
             </div>
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-4 p-5'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-4 p-5 mt-10'>
                 <div className='flex justify-center items-center gap-4'>
                     {bannerLeft.map((slide) => (
                         <div key={slide?._id} className="card-container">
